@@ -14,13 +14,13 @@
 </style>
 
 <script>
-import ECharts from "vue-echarts";
-import "echarts/lib/chart/line";
-import "echarts/lib/component/polar";
+// import ECharts from "vue-echarts";
+// import "echarts/lib/chart/line";
+// import "echarts/lib/component/polar";
 
 export default {
   components: {
-    "v-chart": ECharts
+    "v-chart": VueECharts
   },
   props: {
     x: Array,
