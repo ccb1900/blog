@@ -2,7 +2,7 @@
   <div class="">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">搬砖往事</a>
+        <a :href="$withBase('/')" class="brand-logo">搬砖往事</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a :href="$withBase('/')">首页</a></li>
           <li><a :href="$withBase('/')">issues</a></li>
@@ -36,7 +36,7 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2014 Copyright Text
+          © {{(new Date).getFullYear()}} Copyright
           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
       </div>
