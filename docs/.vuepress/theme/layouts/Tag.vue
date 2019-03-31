@@ -1,6 +1,7 @@
 <template>
   <ccb>
     <div slot="content">
+      <debug></debug>
       <home v-if="$page.type === 'page'"></home>
       <articles v-if="$page.type === 'post'"></articles>
     </div>
