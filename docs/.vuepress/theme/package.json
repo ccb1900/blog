@@ -1,0 +1,8 @@
+{
+  "name": "vuepress-theme-ccb-blog",
+  "version": "0.0.1",
+  "author": {
+    "name": "ccb"
+  },
+  "dependencies": {}
+}
