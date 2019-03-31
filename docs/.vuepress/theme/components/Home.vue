@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <div class="row" v-for="x in $site.pages" :key="x" v-if="x.type === 'post'">
+    <div
+      class="row"
+      v-for="x in $site.pages"
+      :key="x.key"
+      v-if="x.type === 'post'"
+    >
       <div class="col s12 m12">
         <div class="card blue">
           <div class="card-content white-text">
