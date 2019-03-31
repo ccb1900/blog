@@ -18,6 +18,13 @@ module.exports = {
         href: "https://fonts.googleapis.com/icon?family=Material+Icons"
       }
     ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/v-charts/lib/style.min.css"
+      }
+    ],
     ["link", { rel: "icon", href: "/logo.png" }],
     [
       "script",
@@ -29,15 +36,27 @@ module.exports = {
     [
       "script",
       {
-        src: "https://cdn.jsdelivr.net/npm/echarts@4.2.1/dist/echarts.js"
+        src: "https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"
       }
     ],
     [
       "script",
       {
-        src: "https://cdn.jsdelivr.net/npm/vue-echarts@4.0.1"
+        src: "https://cdn.jsdelivr.net/npm/v-charts/lib/index.min.js"
       }
     ]
   ],
-  plugins: []
+  plugins: [],
+  configureWebpack: {
+    externals: {
+      // "v-charts/lib/line.common": "v-charts/lib/line.common"
+    }
+  },
+  chainWebpack: (config, isServer) => {
+    // config 是 ChainableConfig 的一个实例
+    // config.externals({
+    //   // "vue-echarts": "VueECharts"
+    // });
+    // return config;
+  }
 };
