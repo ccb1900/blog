@@ -2,12 +2,13 @@
   <div class="">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">搬砖日志</a>
+        <a href="#" class="brand-logo">搬砖往事</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/">首页</a></li>
-          <li><a href="/about/">关于</a></li>
-          <li><a href="/category/">分类</a></li>
-          <li><a href="/tag/">标签</a></li>
+          <li><a :href="$withBase('/')">首页</a></li>
+          <li><a :href="$withBase('/')">issues</a></li>
+          <li><a :href="$withBase('/about')">关于</a></li>
+          <li><a :href="$withBase('/category')">分类</a></li>
+          <li><a :href="$withBase('/tag')">标签</a></li>
           <li><a href="https://github.com/bluegeek/blog">Github</a></li>
         </ul>
       </div>

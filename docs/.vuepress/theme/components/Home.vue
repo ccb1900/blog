@@ -18,7 +18,7 @@
           </div>
           <div class="card-action">
             <a>{{ x.lastUpdated }}</a>
-            <a :href="x.path">阅读</a>
+            <a :href="$withBase(x.path)">阅读</a>
           </div>
         </div>
       </div>
