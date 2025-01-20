@@ -6,14 +6,14 @@ const pageSize = 10
 
 export default defineConfig({
     head: [
-        ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=TAG_ID' }],
+        ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-GENTXZXPD4' }],
         [
             'script',
             {},
             `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'TAG_ID');`
+          gtag('config', 'G-GENTXZXPD4');`
         ]
     ],
     sitemap: {
