@@ -6,6 +6,14 @@ const pageSize = 10
 
 export default defineConfig({
     head: [
+        [
+            'script',
+            {
+                async: '',
+                crossorigin: 'anonymous',
+                src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1817374283725610'
+            }
+        ],
         ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-GENTXZXPD4' }],
         [
             'script',
