@@ -32,11 +32,12 @@ export default defineConfig({
     cleanUrls: true,
     metaChunk: true,
     sitemap: {
-        hostname: 'https://blog.itistom.com'
+        hostname: 'https://itisos.com',
+        lastmodDateOnly: false
     },
     title: 'Think in everything',
     cacheDir: './node_modules/vitepress_cache',
-    description: 'vitepress,blog,blog-theme',
+    description: 'Think in everything',
     ignoreDeadLinks: true,
     srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
 
