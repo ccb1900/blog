@@ -25,7 +25,7 @@ export default defineConfig({
         ]
     ],
     rewrites: {
-        'en/:rest*': ':rest*'
+        // 'en/:rest*': ':rest*'
     },
 
     lastUpdated: true,

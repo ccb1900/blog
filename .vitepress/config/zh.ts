@@ -34,8 +34,8 @@ export default defineConfig({
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
     themeConfig: {
-        posts: await getPosts('zh', pageSize),
-        website: 'https://blog.itistom.com', //copyright link
+        posts: await getPosts('zh/', pageSize),
+        website: 'https://itistom.com', //copyright link
         // 评论的仓库地址
         // comment: {
         //     repo: 'airene/vitepress-blog-pure',

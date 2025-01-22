@@ -31,7 +31,7 @@ export default defineConfig({
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
     themeConfig: {
-        posts: await getPosts('jp', pageSize),
+        posts: await getPosts('jp/', pageSize),
         // 评论的仓库地址
         nav: [
             { text: 'Hōmu', link: '/jp' },

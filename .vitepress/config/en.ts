@@ -34,7 +34,7 @@ export default defineConfig({
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
     themeConfig: {
-        posts: await getPosts('en', pageSize),
+        posts: await getPosts('', pageSize),
         website: 'https://blog.itistom.com', //copyright link
         // 评论的仓库地址
         comment: {
@@ -44,10 +44,10 @@ export default defineConfig({
         },
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Category', link: '/en/pages/category' },
-            { text: 'Archives', link: '/en/pages/archives' },
-            { text: 'Tags', link: '/en/pages/tags' },
-            { text: 'About', link: '/en/pages/about' }
+            { text: 'Category', link: '/pages/category' },
+            { text: 'Archives', link: '/pages/archives' },
+            { text: 'Tags', link: '/pages/tags' },
+            { text: 'About', link: '/pages/about' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {
