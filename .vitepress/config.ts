@@ -14,14 +14,14 @@ export default defineConfig({
                 src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1817374283725610'
             }
         ],
-        ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-GKSL94MCFY' }],
+        ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-GENTXZXPD4' }],
         [
             'script',
             {},
             `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-GKSL94MCFY');`
+          gtag('config', 'G-GENTXZXPD4');`
         ]
     ],
     sitemap: {
