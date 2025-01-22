@@ -25,9 +25,6 @@ export default defineConfig({
           gtag('config', 'G-GKSL94MCFY');`
         ]
     ],
-    sitemap: {
-        hostname: 'https://blog.itistom.com'
-    },
     title: 'Think in everything',
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
@@ -35,19 +32,13 @@ export default defineConfig({
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts('jp', pageSize),
-        website: 'https://blog.itistom.com', //copyright link
         // 评论的仓库地址
-        comment: {
-            repo: 'airene/vitepress-blog-pure',
-            themes: 'github-light',
-            issueTerm: 'pathname'
-        },
         nav: [
-            { text: 'Home', link: '/jp' },
-            { text: 'Category', link: '/jp/pages/category' },
-            { text: 'Archives', link: '/jp/pages/archives' },
-            { text: 'Tags', link: '/jp/pages/tags' },
-            { text: 'About', link: '/jp/pages/about' }
+            { text: 'Hōmu', link: '/jp' },
+            { text: 'Kategorī', link: '/jp/pages/category' },
+            { text: 'Ākaibu', link: '/jp/pages/archives' },
+            { text: 'Tagu', link: '/jp/pages/tags' },
+            { text: 'Abauto', link: '/jp/pages/about' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {
