@@ -3,11 +3,11 @@ import matter from 'gray-matter'
 import fs from 'fs-extra'
 import { resolve } from 'path'
 
-async function getPosts(pageSize: number) {
-    let paths = await globby(['posts/**/**.md'])
+async function getPosts(lang: string, pageSize: number) {
+    let paths = await globby([lang + '/posts/**.md'])
 
     //生成分页页面markdown
-    await generatePaginationPages(paths.length, pageSize)
+    await generatePaginationPages(lang, paths.length, pageSize)
 
     let posts = await Promise.all(
         paths.map(async (item) => {
@@ -24,7 +24,7 @@ async function getPosts(pageSize: number) {
     return posts
 }
 
-async function generatePaginationPages(total: number, pageSize: number) {
+async function generatePaginationPages(lang: string, total: number, pageSize: number) {
     //  pagesNum
     let pagesNum = total % pageSize === 0 ? total / pageSize : Math.floor(total / pageSize) + 1
     const paths = resolve('./')
@@ -37,7 +37,7 @@ title: ${i === 1 ? 'home' : 'page_' + i}
 aside: false
 ---
 <script setup>
-import Page from "./.vitepress/theme/components/Page.vue";
+import Page from "../.vitepress/theme/components/Page.vue";
 import { useData } from "vitepress";
 const { theme } = useData();
 const posts = theme.value.posts.slice(${pageSize * (i - 1)},${pageSize * i})
@@ -49,7 +49,7 @@ const posts = theme.value.posts.slice(${pageSize * (i - 1)},${pageSize * i})
         }
     }
     // rename page_1 to index for homepage
-    await fs.move(paths + '/page_1.md', paths + '/index.md', { overwrite: true })
+    await fs.move(paths + '/page_1.md', paths + '/' + lang + '/index.md', { overwrite: true })
 }
 
 function _convertDate(date = new Date().toString()) {
