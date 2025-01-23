@@ -25,11 +25,11 @@ export default defineConfig({
         ]
     ],
     rewrites: {
-        // 'en/:rest*': ':rest*'
+        'en/:page*': ':page*'
     },
 
     lastUpdated: true,
-    cleanUrls: true,
+    // cleanUrls: true,
     metaChunk: true,
     sitemap: {
         hostname: 'https://itisos.com',

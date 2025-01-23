@@ -73,7 +73,7 @@ import { useData } from "vitepress";
 const { theme } = useData();
 const posts = theme.value.posts.slice(${pageSize * (i - 1)},${pageSize * i})
 </script>
-<Page :posts="posts" :pageCurrent="${i}" :pagesNum="${pagesNum}" />
+<Page :posts="posts" :pageCurrent="${i}" :pagesNum="${pagesNum}" lang="" />
 `.trim()
             const file = paths + `/page_${i}.md`
             await fs.writeFile(file, page)

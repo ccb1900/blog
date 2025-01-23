@@ -26,7 +26,7 @@ export default defineConfig({
         ]
     ],
     sitemap: {
-        hostname: 'https://blog.itistom.com'
+        hostname: 'https://itistom.com'
     },
     title: 'Think in everything',
     base: '/',
@@ -34,8 +34,8 @@ export default defineConfig({
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
     themeConfig: {
-        posts: await getPosts('', pageSize),
-        website: 'https://blog.itistom.com', //copyright link
+        posts: await getPosts('en/', pageSize),
+        website: 'https://itistom.com', //copyright link
         // 评论的仓库地址
         comment: {
             repo: 'airene/vitepress-blog-pure',
