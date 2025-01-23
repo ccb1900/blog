@@ -8,6 +8,7 @@ dist-ssr
 smartmontools.md
 zsh_history.md
 */index.md
+*/page_*.md
 !/changelog.md
 /package-lock.json
 origin_theme.css
