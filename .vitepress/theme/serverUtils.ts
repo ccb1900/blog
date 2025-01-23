@@ -31,7 +31,7 @@ async function getPosts(lang: string, pageSize: number) {
 async function generatePaginationPages(lang: string, total: number, pageSize: number) {
     //  pagesNum
     let pagesNum = total % pageSize === 0 ? total / pageSize : Math.floor(total / pageSize) + 1
-    const paths = resolve('./')
+    const paths = resolve('./' + lang)
     if (total > 0) {
         for (let i = 1; i < pagesNum + 1; i++) {
             const page = `
@@ -46,14 +46,14 @@ import { useData } from "vitepress";
 const { theme } = useData();
 const posts = theme.value.posts.slice(${pageSize * (i - 1)},${pageSize * i})
 </script>
-<Page :posts="posts" :pageCurrent="${i}" :pagesNum="${pagesNum}" />
+<Page :posts="posts" :pageCurrent="${i}" :pagesNum="${pagesNum}" lang="/${lang}" />
 `.trim()
             const file = paths + `/page_${i}.md`
             await fs.writeFile(file, page)
         }
     }
     // rename page_1 to index for homepage
-    await fs.move(paths + '/page_1.md', paths + '/' + lang + 'index.md', { overwrite: true })
+    await fs.move(paths + '/page_1.md', paths + '/' + 'index.md', { overwrite: true })
 }
 async function generatePaginationPages2(total: number, pageSize: number) {
     //  pagesNum

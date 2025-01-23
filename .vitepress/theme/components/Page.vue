@@ -6,8 +6,11 @@
             </div>
         </div>
         <p class="describe" v-html="article.frontMatter.description"></p>
-        <div class='post-info'>
-            {{ article.frontMatter.date }} <span v-for="item in article.frontMatter.tags"><a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a></span>
+        <div class="post-info">
+            {{ article.frontMatter.date }}
+            <span v-for="item in article.frontMatter.tags"
+                ><a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a></span
+            >
         </div>
     </div>
 
@@ -17,13 +20,13 @@
             :class="{ active: pageCurrent === i }"
             v-for="i in pagesNum"
             :key="i"
-            :href="withBase(i === 1 ? '/index.html' : `/page_${i}.html`)"
-        >{{ i }}</a>
+            :href="withBase(i === 1 ? lang + '/index.html' : lang + `/page_${i}.html`)"
+            >{{ i }}</a
+        >
     </div>
 </template>
 
 <script lang="ts" setup>
-
 import { withBase } from 'vitepress'
 import { PropType } from 'vue'
 interface Article {
@@ -46,6 +49,10 @@ defineProps({
     },
     pagesNum: {
         type: Number as PropType<number>,
+        required: true
+    },
+    lang: {
+        type: String as PropType<string>,
         required: true
     }
 })
