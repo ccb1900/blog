@@ -35,7 +35,7 @@ export default defineConfig({
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts('zh/', pageSize),
-        website: 'https://itistom.com', //copyright link
+        website: '/', //copyright link
         // 评论的仓库地址
         // comment: {
         //     repo: 'airene/vitepress-blog-pure',

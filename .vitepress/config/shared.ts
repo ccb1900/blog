@@ -24,9 +24,9 @@ export default defineConfig({
           gtag('config', 'G-DQ97SX8SFG');`
         ]
     ],
-    rewrites: {
-        'en/:page*': ':page*'
-    },
+    // rewrites: {
+    //     'en/:page*': ':page*'
+    // },
 
     lastUpdated: true,
     // cleanUrls: true,

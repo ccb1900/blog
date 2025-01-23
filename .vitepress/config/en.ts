@@ -35,7 +35,7 @@ export default defineConfig({
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts('en/', pageSize),
-        website: 'https://itistom.com', //copyright link
+        website: '/', //copyright link
         // 评论的仓库地址
         comment: {
             repo: 'airene/vitepress-blog-pure',
@@ -43,11 +43,11 @@ export default defineConfig({
             issueTerm: 'pathname'
         },
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Category', link: '/pages/category' },
-            { text: 'Archives', link: '/pages/archives' },
-            { text: 'Tags', link: '/pages/tags' },
-            { text: 'About', link: '/pages/about' }
+            { text: 'Home', link: '/en' },
+            { text: 'Category', link: '/en/pages/category' },
+            { text: 'Archives', link: '/en/pages/archives' },
+            { text: 'Tags', link: '/en/pages/tags' },
+            { text: 'About', link: '/en/pages/about' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {

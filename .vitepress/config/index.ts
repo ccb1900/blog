@@ -13,9 +13,9 @@ import zh from './zh'
 const config = defineConfig({
     ...shared,
     locales: {
-        root: { label: 'English', ...en },
-        jp: { label: '日语', ...jp },
-        zh: { label: '简体中文', ...zh }
+        root: { label: 'English', ...en, link: 'https://itisos.com' },
+        jp: { label: '日语', ...jp, link: 'https://itisos.com/jp' },
+        zh: { label: '简体中文', ...zh, link: 'https://itisos.com/zh' }
     }
 })
 export default config
