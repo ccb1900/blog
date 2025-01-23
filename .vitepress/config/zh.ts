@@ -46,8 +46,8 @@ export default defineConfig({
             { text: '主页', link: '/zh' },
             { text: '分类', link: '/zh/pages/category' },
             { text: '归档', link: '/zh/pages/archives' },
-            { text: '标签', link: '/zh/pages/tags' },
-            { text: '关于', link: '/zh/pages/about' }
+            { text: '标签', link: '/zh/pages/tags' }
+            // { text: '关于', link: '/zh/pages/about' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {
