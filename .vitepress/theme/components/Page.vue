@@ -9,7 +9,7 @@
         <div class="post-info">
             {{ article.frontMatter.date }}
             <span v-for="item in article.frontMatter.tags"
-                ><a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a></span
+                ><a :href="withBase(`${lang}pages/tags.html?tag=${item}`)"> {{ item }}</a></span
             >
         </div>
     </div>

@@ -4,7 +4,7 @@ import fs from 'fs-extra'
 import { resolve } from 'path'
 
 async function getPosts(lang: string, pageSize: number) {
-    let paths = await globby([lang + 'posts/**.md'])
+    let paths = await globby([lang + 'posts/**/**.md'])
 
     //生成分页页面markdown
     if (lang === '') {

@@ -2,6 +2,7 @@
 date: 2025-01-08
 title: 《大奉打更人》魔改争议：IP改编的困境与反思
 category: 影视评论
+lang: zh
 tags:
     - IP改编
     - 魔改
