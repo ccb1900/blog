@@ -9,8 +9,13 @@ import zh from './zh'
 // import { es } from './es'
 // import { ko } from './ko'
 // import { fa } from './fa'
+import Images from 'vite-plugin-vue-images'
 
 const config = defineConfig({
+    vite: {
+        assetsInclude: ['**/*.jpg'],
+        plugins: [Images()]
+    },
     ...shared,
     locales: {
         root: { label: 'English', ...en, link: 'https://itisos.com' },
