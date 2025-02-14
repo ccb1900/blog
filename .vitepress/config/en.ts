@@ -6,32 +6,32 @@ const pageSize = 10
 
 export default defineConfig({
     lang: 'en-US',
-    head: [
-        [
-            'script',
-            {
-                async: '',
-                crossorigin: 'anonymous',
-                src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1817374283725610'
-            }
-        ],
-        ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-GKSL94MCFY' }],
-        [
-            'script',
-            {},
-            `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-GKSL94MCFY');`
-        ]
-    ],
+    // head: [
+    //     [
+    //         'script',
+    //         {
+    //             async: '',
+    //             crossorigin: 'anonymous',
+    //             src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1817374283725610'
+    //         }
+    //     ],
+    //     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-GKSL94MCFY' }],
+    //     [
+    //         'script',
+    //         {},
+    //         `window.dataLayer = window.dataLayer || [];
+    //       function gtag(){dataLayer.push(arguments);}
+    //       gtag('js', new Date());
+    //       gtag('config', 'G-GKSL94MCFY');`
+    //     ]
+    // ],
     sitemap: {
         hostname: 'https://itistom.com'
     },
     title: 'Think in everything',
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
-    description: 'vitepress,blog,blog-theme',
+    // description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts('en/', pageSize),

@@ -9,6 +9,7 @@
             </div>
         </template>
     </Layout>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-1817374283725610"> </amp-auto-ads>
     <Copyright />
 </template>
 <script setup>
