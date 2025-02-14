@@ -18,9 +18,9 @@ const config = defineConfig({
     },
     ...shared,
     locales: {
-        root: { label: 'English', ...en, link: 'https://itisos.com' },
-        jp: { label: '日语', ...jp, link: 'https://itisos.com/jp' },
-        zh: { label: '简体中文', ...zh, link: 'https://itisos.com/zh' }
+        root: { label: 'English', ...en, link: '/#/' },
+        jp: { label: '日语', ...jp, link: '/jp/#/' },
+        zh: { label: '简体中文', ...zh, link: '/zh/#/' }
     }
 })
 export default config
